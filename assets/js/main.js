@@ -1,3 +1,35 @@
+
+const navLinks = document.querySelectorAll('header nav a');
+
+
+const logoLink = document.querySelector('.logo');
+
+
+const activepage = () => {
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+  });
+};
+
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (!link.classList.contains('active')) {
+      activepage();
+      link.classList.add('active');
+    }
+  });
+});
+
+
+logoLink.addEventListener('click', () => {
+ 
+  if (!navLinks[0].classList.contains('active')) {
+    activepage();
+    navLinks[0].classList.add('active');
+  }
+});
+ 
 const resumeBtns = document.querySelectorAll(".resume-btn");
 
 resumeBtns.forEach((btn, idx) => {
