@@ -793,6 +793,9 @@ animation-delay: 1.6s;
     text-align: center;
     display: none;
   }
+  nav.active{
+    display: block;
+  }
   nav a{
     display: block;
     margin: 4rem 0;
